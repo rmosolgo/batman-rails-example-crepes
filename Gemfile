@@ -7,8 +7,6 @@ gem 'active_model_serializers'
 gem "slim-rails"
 gem 'slim_assets'
 
-gem 'sqlite3'
-
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
