@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+ruby '2.0.0'
 gem 'rails', '4.0.1'
 gem 'active_model_serializers'
 gem "slim-rails"
@@ -10,11 +11,20 @@ gem 'sqlite3'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
-gem 'batman-rails'
+gem 'batman-rails', '~> 0.15'
 
 gem 'sass-rails', '~> 4.0.0'
 gem 'bootstrap-sass'
 gem "binding_of_caller"
+
+group :production do
+  gem 'rails_12factor'
+  gem 'pg'
+end
+
+group :development, :test do
+  gem 'sqlite3'
+end
 
 group :development do
   gem 'guard'
