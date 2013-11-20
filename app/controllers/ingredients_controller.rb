@@ -1,0 +1,2 @@
+class IngredientsController < ResourceController
+end

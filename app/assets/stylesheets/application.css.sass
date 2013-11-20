@@ -1,0 +1,38 @@
+/*
+ *= require_self
+ *= require_tree .
+ *=
+ */
+@import 'bootstrap'
+
+body
+  @extend .container
+
+body > header
+  @extend .jumbotron
+
+body > nav
+  @extend .col-md-3
+  ul
+    @extend .list-group
+    li
+      @extend .list-group-item
+      a.edit
+        @extend .pull-right
+        @extend .text
+        @extend .text-warning
+
+#main
+  @extend .col-md-9
+  h1, h2
+    @extend .page-header
+
+
+form
+  label
+    @extend .control-label
+  input[type=text]
+    @extend .form-control
+  input[type=submit]
+    @extend .btn
+    @extend .btn-primary
