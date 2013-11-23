@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Crepe::Application.config.secret_key_base = '03ae43ad493e1b3804f2be53ef5cb4c6063135330ad57d5cc2b524965b0a2fb6f56205f209f713e8fc04bcf92b4edf401bfa2e0fe46d71fcfb0a6303a1bf9153'
+Creperie::Application.config.secret_key_base = '03ae43ad493e1b3804f2be53ef5cb4c6063135330ad57d5cc2b524965b0a2fb6f56205f209f713e8fc04bcf92b4edf401bfa2e0fe46d71fcfb0a6303a1bf9153'

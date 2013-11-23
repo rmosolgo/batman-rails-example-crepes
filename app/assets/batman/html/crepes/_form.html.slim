@@ -1,0 +1,9 @@
+form data-formfor-crepe='currentCrepe' data-event-submit='saveCrepe | withArguments currentCrepe'
+  label Name
+  input type='text' data-bind='crepe.name'
+  label Price
+  input type='text' placeholder='ex: 6.75' data-bind='crepe.price'
+
+  section data-view='CrepeToppingsView'
+
+  input type='submit' value='Save!'

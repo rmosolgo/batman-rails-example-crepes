@@ -17,9 +17,15 @@
 
 Batman.config.pathToHTML = '/assets/html'
 
-class Crepe extends Batman.App
+class Creperie extends Batman.App
+
+  @resources 'crepes'
+
+
+  @resources 'toppings'
+
 
   @resources 'ingredients'
   @root 'ingredients#index'
 
-(global ? window).Crepe = Crepe
+(global ? window).Creperie = Creperie

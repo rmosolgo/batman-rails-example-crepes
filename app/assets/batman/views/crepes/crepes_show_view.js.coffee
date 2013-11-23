@@ -1,9 +1,6 @@
-class Crepe.NavView extends Batman.View
-  source: 'layouts/nav'
-
+class Creperie.CrepesShowView extends Batman.View
   viewDidAppear: ->
-    console.log("Apperrd")
-    @set('ingredients', Crepe.Ingredient.get('all'))
+    # Your node is in the DOM and ready to accept instructions (aka jQuery)
 
   # buttonWasClicked: (node, event, view) ->
     # You can put all of your event handlers in this view file. You can access

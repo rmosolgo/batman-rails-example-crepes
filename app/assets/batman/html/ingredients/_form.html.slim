@@ -1,7 +1,7 @@
-form data-formfor-ingredient='currentIngredient' data-event-submit='saveIngredient | withArguments currentIngredient'
+form data-formfor-ing='ingredient' data-event-submit='saveIngredient | withArguments ingredient'
   label Name
-  input type='text' data-bind='ingredient.name'
+  input type='text' data-bind='ing.name'
   label Category
-  input type='text' data-bind='ingredient.category'
+  input type='text' data-bind='ing.category'
   input type='submit' value='Save!'
   .errors

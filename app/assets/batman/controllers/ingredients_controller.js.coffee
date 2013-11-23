@@ -1,25 +1,25 @@
-class Crepe.IngredientsController extends Crepe.ApplicationController
+class Creperie.IngredientsController extends Creperie.ApplicationController
   routingKey: 'ingredients'
 
   @observeAll 'ingredient', (newValue, oldValue) ->
-    Crepe.set('Title', newValue.get('name'))
+    Creperie.set('Title', (newValue.get('name') || "New") )
 
   index: (params) ->
-    Crepe.set 'Title', 'Ingredients'
-    @set 'ingredients', Crepe.Ingredient.get('all')
+    Creperie.set 'Title', 'Ingredients'
+    @set 'ingredients', Creperie.Ingredient.get('all')
 
   show: (params) ->
-    Crepe.Ingredient.find params.id , (err, ing) =>
+    Creperie.Ingredient.find params.id , (err, ing) =>
       throw err if err
       @set 'ingredient', ing
 
   edit: (params) ->
-    Crepe.Ingredient.find params.id , (err, ing) =>
+    Creperie.Ingredient.find params.id , (err, ing) =>
       throw err if err
-      @set 'currentIngredient', ing
+      @set 'ingredient', ing
 
   new: (params) ->
-    @set 'currentIngredient', new Crepe.Ingredient
+    @set 'ingredient', new Creperie.Ingredient
 
   saveIngredient: (ingredient) ->
     console.log "saving", ingredient.toJSON()

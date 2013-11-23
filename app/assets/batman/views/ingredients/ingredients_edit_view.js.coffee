@@ -1,4 +1,4 @@
-class Crepe.IngredientsEditView extends Batman.View
+class Creperie.IngredientsEditView extends Batman.View
   viewDidAppear: ->
     # Your node is in the DOM and ready to accept instructions (aka jQuery)
 

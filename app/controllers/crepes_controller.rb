@@ -1,0 +1,2 @@
+class CrepesController < ResourceController
+end

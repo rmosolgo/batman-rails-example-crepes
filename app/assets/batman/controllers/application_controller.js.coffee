@@ -1,1 +1,1 @@
-class Crepe.ApplicationController extends Batman.Controller
+class Creperie.ApplicationController extends Batman.Controller

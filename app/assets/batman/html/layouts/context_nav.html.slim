@@ -1,0 +1,13 @@
+ul.ingredients
+  / li
+  /   a data-route='routes[itemRoute]'
+  /     span All&nbsp;
+  /     span data-bind='itemClass.name | pluralize'
+  li.ingredient data-foreach-item='itemClass.all'
+    a data-route='routes[itemRoute][item]'
+      span data-bind='item'
+    a.edit data-route='routes[itemRoute][item].edit' edit
+  li
+    a data-route='routes[itemRoute].new'
+      span New&nbsp;
+      span data-bind='itemClass.name'

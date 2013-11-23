@@ -1,16 +1,18 @@
 doctype html
 html
   head
-    title data-bind='Title | default "Home" | prepend "Crepe | "'
+    title data-bind='Title | default "Home" | prepend "Creperie | "'
     = stylesheet_link_tag    "application", :media => "all"
-    = javascript_include_tag "crepe"
+    = javascript_include_tag "creperie"
     = csrf_meta_tags
   body
     header
-      h1 Crepes!
+      section
+        h1 Creperie!
+      nav data-view='NavBarView'
 
-    nav data-view='NavView'
+    nav data-view='ContextNavView'
     section#main data-yield='main'
 
   script type="text/javascript"
-    | Crepe.run();
+    | Creperie.run();

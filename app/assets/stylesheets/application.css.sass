@@ -9,10 +9,20 @@ body
   @extend .container
 
 body > header
-  @extend .jumbotron
+  section
+    @extend .jumbotron
+  nav
+    @extend .navbar
+    @extend .navbar-default
+    ul
+      @extend .nav
+      @extend .navbar-nav
+      li
+        &.active
+          @extend .active
 
 body > nav
-  @extend .col-md-3
+  @extend .col-md-4
   ul
     @extend .list-group
     li
@@ -23,7 +33,7 @@ body > nav
         @extend .text-warning
 
 #main
-  @extend .col-md-9
+  @extend .col-md-8
   h1, h2
     @extend .page-header
 
@@ -31,7 +41,7 @@ body > nav
 form
   label
     @extend .control-label
-  input[type=text]
+  input[type=text], select
     @extend .form-control
   input[type=submit]
     @extend .btn

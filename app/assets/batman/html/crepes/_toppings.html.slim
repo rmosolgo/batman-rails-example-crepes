@@ -1,0 +1,4 @@
+label Add a Topping
+select data-bind='currentIngredient' data-event-change='addTopping'
+  option
+  option data-foreach-ing='Ingredient.all' data-bind-value='ing.id' data-bind-label='ing'

@@ -3,4 +3,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Crepe::Application.load_tasks
+Creperie::Application.load_tasks

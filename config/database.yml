@@ -20,6 +20,6 @@ test:
 
 production:
   adapter: postgres
-  database: crepe_production
+  database: creperie_production
   pool: 5
   timeout: 5000
