@@ -23,14 +23,18 @@ body > header
 
 body > nav
   @extend .col-md-4
-  ul
+  .items
     @extend .list-group
-    li
+    .item
       @extend .list-group-item
-      a.edit
-        @extend .pull-right
-        @extend .text
-        @extend .text-warning
+      .edit
+        @extend .btn
+        @extend .btn-default
+        @extend .btn-sm
+        position: absolute
+        right: 5px
+        top: 5px
+
 
 #main
   @extend .col-md-8

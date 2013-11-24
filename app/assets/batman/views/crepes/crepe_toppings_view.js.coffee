@@ -5,3 +5,4 @@ class Creperie.CrepeToppingsView extends Creperie.ApplicationView
     crepe = @get('crepe')
     ingId = @get('currentIngredient')
 
+
