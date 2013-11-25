@@ -12,6 +12,9 @@ class Creperie.CrepesController extends Creperie.ApplicationController
       @set 'currentCrepe', crepe
 
   edit: (params) ->
+    Creperie.Crepe.find params.id, (err, crepe) =>
+      throw err if err
+      @set 'currentCrepe', crepe
 
   new: (params) ->
     @set 'currentCrepe', new Creperie.Crepe

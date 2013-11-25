@@ -19,10 +19,8 @@ Batman.config.pathToHTML = '/assets/html'
 
 class Creperie extends Batman.App
 
-  @resources 'crepes'
-
-
-  @resources 'toppings'
+  @resources 'crepes', ->
+    @resources 'toppings'
 
 
   @resources 'ingredients'

@@ -10,7 +10,6 @@ class Creperie.ContextNavView extends Creperie.ApplicationView
         @set 'itemClass', itemClass
         @set 'itemRoute', currentController
 
-
     Creperie.observe "currentParams.id", (newValue, oldValue) =>
       console.log(newValue, oldValue)
       @set 'itemId', parseInt(newValue)

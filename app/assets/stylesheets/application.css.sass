@@ -10,8 +10,10 @@ body
 
 body > header
   section
+    @extend .row
     @extend .jumbotron
   nav
+    @extend .row
     @extend .navbar
     @extend .navbar-default
     ul
@@ -27,13 +29,18 @@ body > nav
     @extend .list-group
     .item
       @extend .list-group-item
+      &.active
+        @extend .alert-info
       .edit
         @extend .btn
-        @extend .btn-default
         @extend .btn-sm
         position: absolute
         right: 5px
         top: 5px
+        @extend .btn-default
+
+        &.active
+          @extend .btn-primary
 
 
 #main

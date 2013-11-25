@@ -5,7 +5,7 @@ gem 'rails', '4.0.1'
 gem 'unicorn'
 gem 'active_model_serializers'
 gem "slim-rails"
-gem 'slim_assets'
+# gem 'slim_assets'
 
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'

@@ -1,7 +1,9 @@
-div.items
-  a.item data-foreach-item='itemClass.all' data-route='routes[itemRoute][item]' data-addclass-active='item.id | equals itemId'
-    span data-bind='item'
-    button.edit data-route='routes[itemRoute][item].edit' edit
-  a.item.new-item data-route='routes[itemRoute].new'
-    span New&nbsp;
-    span data-bind='itemClass.name'
+ul.items
+  li.item data-foreach-item='itemClass.all' data-addclass-active='item.id | equals itemId | and currentRoute.action | equals "show" '
+    a data-route='routes[itemRoute][item]'
+      span data-bind='item'
+    a.edit data-route='routes[itemRoute][item].edit'  data-addclass-active='item.id | equals itemId | and currentRoute.action | equals "edit"' edit
+  li.item.new-item
+    a data-route='routes[itemRoute].new'
+      span New&nbsp;
+      span data-bind='itemClass.name'
