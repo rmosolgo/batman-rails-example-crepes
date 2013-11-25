@@ -6,4 +6,4 @@ ul.items
   li.item.new-item
     a data-route='routes[itemRoute].new'
       span New&nbsp;
-      span data-bind='itemClass.name'
+      span data-bind='itemClass.resourceName | humanize | singularize'
