@@ -59,7 +59,7 @@ Creperie::Application.configure do
 
   # Precompile additional assets.
   # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
-  config.assets.precompile += %w( Creperie.js /batman/html)
+  config.assets.precompile += %w( creperie.js /batman/html)
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
