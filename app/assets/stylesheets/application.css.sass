@@ -1,6 +1,5 @@
 /*
  *= require_self
- *= require_tree .
  *=
  */
 @import 'bootstrap'
@@ -48,12 +47,17 @@ body > nav
   h1, h2
     @extend .page-header
 
+@import './_forms'
 
-form
-  label
-    @extend .control-label
-  input[type=text], select
-    @extend .form-control
-  input[type=submit]
+.thumb
+  @extend .col-md-3
+  @extend .col-sm-4
+  @extend .thumbnail
+  .thumb-text
+    @extend .caption
+
+  .destroy
     @extend .btn
-    @extend .btn-primary
+    @extend .btn-xs
+    @extend .btn-danger
+

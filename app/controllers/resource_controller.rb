@@ -16,7 +16,7 @@ class ResourceController < ApplicationController
   def create
     @resource = @class.new(resource_params)
     if @resource.save
-      respond_with @resource
+      render json: @resource
     else
       respond_with @resource.errors
     end

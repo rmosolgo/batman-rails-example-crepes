@@ -1,17 +1,10 @@
 h1 Ingredients
 p data-bind='ingredients.length | prepend "Total: "'
 
+.toppings data-foreach-ingredient='ingredients'
+  .thumb
+    img data-bind-src='ingredient.photo_url'
+    .thumb-text
+      h4 data-source='ingredient.name'
+      span.destroy Destroy
 
-hr
-
-ul
-  li data-foreach-ingredient='ingredients'
-    a data-route='routes.ingredients[ingredient]'
-      strong data-bind='ingredient.name'
-      span data-bind= 'ingredient.category | prepend " (" | append ") "'
-    ||
-    a data-event-click='destroyIngredient | withArguments ingredient' Destroy
-
-hr
-a data-route='routes.ingredients.new'
-  | New Ingredient

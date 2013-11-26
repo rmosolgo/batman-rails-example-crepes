@@ -24,6 +24,7 @@ class Creperie.IngredientsController extends Creperie.ApplicationController
   saveIngredient: (ingredient) ->
     console.log "saving", ingredient.toJSON()
     ingredient.save (err, ing) =>
+      console.log(err)
       throw err if err
       @redirect('/ingredients')
 

@@ -1,8 +1,8 @@
 class Creperie.Ingredient extends Creperie.ApplicationModel
-  @resourceName: 'ingredients'
+  @resourceName: 'ingredient'
   @storageKey: 'ingredients'
 
-  @encode 'name', 'category', 'id'
+  @encode 'name', 'category', 'id', 'photo', 'photo_url'
   @validate 'name', presence: true
   @validate 'category', presence: true
 

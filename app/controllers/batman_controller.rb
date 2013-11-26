@@ -1,5 +1,4 @@
 class BatmanController < ApplicationController
-
   def index
     if request.xhr?
       prefix_length = Rails.application.config.assets.prefix.length + 1

@@ -1,6 +1,8 @@
-input.toppings type='text' data-source='currentCrepe.toppings | map "ingredient.name" | join ", "'
+div.toppings
+  div data-foreach-topping='currentCrepe.toppings' data-partial='toppings/_topping'
+
 
 label Add a Topping
-select data-bind='currentIngredient' data-event-change='currentCrepe.addTopping | withArguments currentIngredient'
+select.new-topping data-bind='currentIngredient' data-event-change='addTopping | withArguments currentIngredient'
   option
   option data-foreach-ing='Ingredient.all' data-bind-value='ing.id' data-bind-label='ing'

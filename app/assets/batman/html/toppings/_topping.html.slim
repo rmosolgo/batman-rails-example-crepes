@@ -1,0 +1,6 @@
+div.thumb
+  img data-bind-src='topping.photo_url'
+  .thumb-text
+    h4
+      span data-source='topping.ingredient.name'
+    span.destroy data-event-click='currentCrepe.removeTopping | withArguments topping' Remove

@@ -14,13 +14,10 @@ class Creperie.Crepe extends Creperie.ApplicationModel
          ingredients.add(t.get('ingredient'))
       ingredients
 
-  addTopping: (ingredientId) ->
-    console.log "add topping with ing #{ingredientId}"
-    newTopping = new Creperie.Topping(crepeId: @get('id'), ingredientId: ingredientId)
-    @get('toppings').add(newTopping)
-    @save (err, crepe) ->
+  removeTopping: (topping) ->
+    topping.destroy (err, topping) ->
       throw err if err
-      console.log crepe
+      console.log("destroyed topping!")
 
   toString: ->
     "#{@get('name')} ($#{@get('price')})"
